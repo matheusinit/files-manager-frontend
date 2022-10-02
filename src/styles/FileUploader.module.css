@@ -1,0 +1,112 @@
+.outer {
+  box-shadow: 2px 3px 10px 3px rgba(70, 65, 65, 0.25);
+  padding: 0.75em;
+  width: 100%;
+  border-radius: 4px;
+}
+
+.container {
+  width: 100%;
+  min-height: 120px;
+  text-align: center;
+
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='4' ry='4' stroke='%23C5A2DEFF' stroke-width='3' stroke-dasharray='15' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+  border-radius: 4px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container:hover {
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='4' ry='4' stroke='%237D47A5FF' stroke-width='3' stroke-dasharray='15' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+  transition: ease-in-out 0.15s;
+  cursor: pointer;
+}
+
+.container span {
+  font-size: 1.125em;
+}
+
+.file_upload_box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: #C5A2DE;
+}
+
+.container:hover .file_upload_box {
+  color: #7D47A5;
+  transition: ease-in-out 0.15s;
+}
+
+.file_upload_box span {
+  font-weight: 300;
+  color: #333;
+  color: inherit;
+}
+
+.button_container {
+  width: 100%;
+  margin-top: 1.25em;
+  margin-right: auto;
+  margin-left: auto;
+
+  display: flex;
+}
+
+.button_container button {
+  flex: 1;
+  height: 2.5em;
+  font-size: 1.125rem;
+  cursor: pointer;
+  border-radius: 6px;
+  font-family: inherit;
+  border: none;
+  font-weight: 500;
+}
+
+.button_container button:not(:last-child) {
+  margin-right: 1em;
+}
+
+button.upload_button {
+  padding: 0.5em 1.5em;
+  background-color: #7D47A5;
+  color: #fff;
+  border: 1px solid #7D47A5;
+}
+
+button.upload_button_dark {
+  padding: 0.5em 1.5em;
+  color: #fff;
+  background-color: var(--secondary-background);
+  border: 1px solid #5A5A5A;
+}
+
+button.reset_button {
+  padding: 0.5em 1.5em;
+
+  background-color: #ca5656;
+  border: 1px solid #ca5656;
+  color: #fff;
+}
+
+button.reset_button_dark {
+  padding: 0.5em 1.5em;
+  color: #fff;
+  background-color: var(--secondary-background);
+  border: 1px solid #ca5656;
+}
+
+.file_list {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+
+  margin-top: 1em;
+}

@@ -1,0 +1,46 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "node": true
+    },
+    "extends": [
+        "plugin:jsx-a11y/recommended",
+        "plugin:react/recommended",
+        "standard-with-typescript"
+    ],
+    "overrides": [],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": "latest",
+        "sourceType": "module",
+        "project": [
+            "./tsconfig.json"
+        ]
+    },
+    "plugins": [
+        "@typescript-eslint",
+        "react",
+        "jsx-a11y"
+    ],
+    "rules": {
+        "react/react-in-jsx-scope": "off",
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "react/jsx-curly-spacing": ["error", {
+            "when": "never",
+            "allowMultiline": true,
+            "children": true
+        }],
+        "react/jsx-indent": ["error", 2],
+        "react/jsx-indent-props": ["error", 2],
+        "indent": "off",
+        "@typescript-eslint/indent": ["error", 2],
+        "semi": ["error", "never"],
+        "react/jsx-max-props-per-line": [2, { 
+            "maximum": 1,
+            "when": "multiline"
+        }]
+    }
+}
