@@ -84,14 +84,12 @@ export const FileListItem: FC<Props> = ({ id, filename, size, mimetype, setFiles
         <Button
           color="#FFF"
           backgroundColor={themeType === 'dark' ? theme['--secondary-background'] : '#CA5656'}
-          // backgroundColor='#CA5656'
           borderRadius='24px'
           borderColor={themeType === 'dark' ? '#CA5656' : 'none'}
           onClick={deleteFileEvent}
         >Delete</Button>
 
         <Button color="#fff"
-          // backgroundColor='#2965BF'
           backgroundColor={themeType === 'dark' ? theme['--secondary-background'] : '#2965BF'}
           borderRadius='24px'
           borderColor={themeType === 'dark' ? '#2965BF' : 'none'}

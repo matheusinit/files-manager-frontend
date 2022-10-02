@@ -47,3 +47,29 @@ button.about_button:hover {
   color: #ccc;
   transition: ease-in 0.2s;
 }
+
+button.about_button_dark {
+  position: absolute;
+
+  bottom: 1em;
+  right: 1em;
+
+  border: none;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  width: 166px;
+  height: 37px;
+  background-color: var(--ternary-background);
+  color: #fff;
+  border-radius: 4px;
+}
+
+button.about_button_dark:hover {
+  color: #ccc;
+  transition: ease-in 0.2s;
+}

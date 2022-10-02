@@ -9,7 +9,7 @@ import { useTheme } from '../components/theme'
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
-  const { theme } = useTheme()
+  const { theme, themeType } = useTheme()
 
   return (
     <div style={{ ...theme as CSSProperties }}>
@@ -27,7 +27,7 @@ const Home: NextPage = () => {
         </main>
 
         <footer>
-          <button className={styles.about_button}>About this app</button>
+          <button className={themeType === 'light' ? styles.about_button : styles.about_button_dark}>About this app</button>
         </footer>
       </div>
     </div>
