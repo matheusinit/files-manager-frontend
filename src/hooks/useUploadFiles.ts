@@ -1,15 +1,19 @@
-import { useState } from 'react'
+import { Dispatch, SetStateAction, useState } from 'react'
 import { api } from '../services/api'
 
-interface Params {
+interface UploadFilesParams {
   files: File[]
 }
 
-export const useUploadFiles = () => {
+interface Params {
+  setProgress: Dispatch<SetStateAction<number>>
+}
+
+export const useUploadFiles = ({ setProgress }: Params) => {
   const [isDone, setIsDone] = useState<boolean>(false)
   const [isLoading, setIsLoading] = useState<boolean>(false)
 
-  const uploadFiles = async ({ files }: Params) => {
+  const uploadFiles = async ({ files }: UploadFilesParams) => {
     setIsLoading(true)
 
     const formData = new FormData()
@@ -21,6 +25,15 @@ export const useUploadFiles = () => {
     await api.post('/file', formData, {
       headers: {
         'Content-Type': 'multipart/form-data'
+      },
+      onUploadProgress: (progressEvent) => {
+        const progress = progressEvent.loaded / progressEvent.total
+        setProgress(progress)
+      },
+      onDownloadProgress (progressEvent) {
+        const progress = 50 + (progressEvent.loaded / progressEvent.total) * 50
+        console.log(progress)
+        setProgress(progress)
       }
     })
 

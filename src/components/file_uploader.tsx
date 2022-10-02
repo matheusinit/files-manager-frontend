@@ -1,7 +1,9 @@
 import {
   ChangeEvent,
   CSSProperties,
+  Dispatch,
   FC,
+  SetStateAction,
   useCallback,
   useState
 } from 'react'
@@ -19,11 +21,15 @@ const iconStyles: CSSProperties = {
   marginBottom: '10px'
 }
 
-const FileUploader: FC = () => {
+interface Props {
+  setProgress: Dispatch<SetStateAction<number>>
+}
+
+const FileUploader: FC<Props> = ({ setProgress }) => {
   const { theme, themeType } = useTheme()
   const [files, setFiles] = useState<File[]>([])
 
-  const { uploadFiles } = useUploadFiles()
+  const { uploadFiles } = useUploadFiles({ setProgress })
 
   const resetFiles = (): void => setFiles([])
 
