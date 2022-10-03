@@ -29,7 +29,7 @@ const List: NextPage<PageProps> = ({ filesSsr }) => {
     <div style={{ ...theme as CSSProperties }} className={styles.container_around}>
       <Header />
       <main className={styles.container}>
-        <h2 className={styles.title}>Welcome $user</h2>
+        <h2 className="text-black dark:text-white font-semibold text-4xl mb-4">Welcome $user</h2>
 
         {files.map(file => (
           <FileListItem

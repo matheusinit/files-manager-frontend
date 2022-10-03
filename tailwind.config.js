@@ -5,6 +5,7 @@ module.exports = {
     './src/components/*.tsx'
 
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {

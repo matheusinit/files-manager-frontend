@@ -4,13 +4,6 @@
   margin-right: auto;
 }
 
-.container .title {
-  font-size: 2.5rem;
-  color: var(--text);
-
-  margin-bottom: 1em;
-}
-
 .container_around {
   min-height: 100vh;
   background-color: var(--background);

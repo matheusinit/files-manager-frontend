@@ -15,6 +15,9 @@ export const ThemeButton = () => {
 
     if (definedTheme === 'dark' || definedTheme === 'light') {
       setCurrentTheme(definedTheme)
+      if (definedTheme === 'dark') {
+        document.querySelector('html')?.classList.add('dark')
+      }
     }
   }, [])
 
@@ -26,6 +29,12 @@ export const ThemeButton = () => {
 
       if (typeof window !== 'undefined') {
         localStorage.setItem('@theme', JSON.stringify(theme))
+      }
+
+      if (theme === 'dark') {
+        document.querySelector('html')?.classList.add('dark')
+      } else if (theme === 'light') {
+        document.querySelector('html')?.classList.remove('dark')
       }
 
       return theme
