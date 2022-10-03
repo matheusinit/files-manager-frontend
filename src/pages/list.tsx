@@ -2,7 +2,7 @@
 /* eslint-disable react/prop-types */
 import { GetServerSideProps, NextPage } from 'next'
 import prettyBytes from 'pretty-bytes'
-import React, { CSSProperties } from 'react'
+import React, { CSSProperties, useEffect } from 'react'
 
 import { FileListItem } from '../components/file_list_item'
 import { Header } from '../components/header'
@@ -14,12 +14,16 @@ import { api } from '../services/api'
 import styles from '../styles/List.module.css'
 
 interface PageProps {
-  files: File[]
+  filesSsr: File[]
 }
 
-const List: NextPage<PageProps> = ({ files }) => {
-  const { setFiles } = useFiles()
+const List: NextPage<PageProps> = ({ filesSsr }) => {
+  const { setFiles, files } = useFiles()
   const { theme } = useTheme()
+
+  useEffect(() => {
+    setFiles([...filesSsr])
+  }, [])
 
   return (
     <div style={{ ...theme as CSSProperties }} className={styles.container_around}>
@@ -47,7 +51,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 
   return {
     props: {
-      files: data
+      filesSsr: data
     }
   }
 }

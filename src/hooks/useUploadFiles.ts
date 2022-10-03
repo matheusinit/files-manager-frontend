@@ -32,7 +32,6 @@ export const useUploadFiles = ({ setProgress }: Params) => {
       },
       onDownloadProgress (progressEvent) {
         const progress = 50 + (progressEvent.loaded / progressEvent.total) * 50
-        console.log(progress)
         setProgress(progress)
       }
     })
