@@ -41,6 +41,8 @@
         "react/jsx-max-props-per-line": [2, { 
             "maximum": 1,
             "when": "multiline"
-        }]
+        }],
+        "quotes": ["error", "single"],
+        "jsx-quotes": ["error", "prefer-single"]
     }
 }
