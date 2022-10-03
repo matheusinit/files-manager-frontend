@@ -99,8 +99,16 @@ const FileUploader: FC<Props> = ({ setProgress }) => {
       )}
 
       <div className={styles.button_container}>
-        <button className={themeType === 'light' ? styles.reset_button : styles.reset_button_dark} onClick={resetFiles}>Cancel</button>
-        <button className={themeType === 'light' ? styles.upload_button : styles.upload_button_dark} onClick={onUpload}>Upload</button>
+        <button
+          className={`h-10 py-2 px-6  border border-solid border-custom-red  hover:text-gray-200 text-white
+            ${themeType === 'light' ? 'bg-custom-red hover:bg-red-700' : 'bg-transparent'}
+          `}
+          onClick={resetFiles}>Cancel</button>
+        <button
+          className={`${themeType === 'light' ? 'bg-primary' : 'bg-transparent'}
+           ${themeType === 'dark' ? 'border border-solid border-neutral-600' : ''} 
+           text-white py-2 px-6 hover:text-gray-200`}
+          onClick={onUpload}>Upload</button>
       </div>
     </>
   )

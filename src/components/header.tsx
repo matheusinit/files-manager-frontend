@@ -13,7 +13,7 @@ export const Header = () => {
 
   return (
     <header className={styles.container}>
-      <h3>
+      <h3 className="font-medium text-xl">
         <Link href="/">Files Manager</Link>
       </h3>
 
@@ -21,7 +21,9 @@ export const Header = () => {
         {pathname === '/' && (
           <button>
             <Link href="/list">
-              <BsList size={20} style={{ color: `${theme['--text']}` }} />
+              <BsList
+                size={20}
+                style={{ color: `${theme['--text']}` }} />
             </Link>
           </button>
         )}

@@ -39,7 +39,7 @@
 }
 
 .container:hover .file_upload_box {
-  color: #7D47A5;
+  color: var(--primary);
   transition: ease-in-out 0.15s;
 }
 
@@ -65,7 +65,6 @@
   cursor: pointer;
   border-radius: 6px;
   font-family: inherit;
-  border: none;
   font-weight: 500;
 }
 
@@ -75,9 +74,9 @@
 
 button.upload_button {
   padding: 0.5em 1.5em;
-  background-color: #7D47A5;
+  background-color: var(--primary);
   color: #fff;
-  border: 1px solid #7D47A5;
+  border: 1px solid var(--primary);
 }
 
 button.upload_button_dark {
