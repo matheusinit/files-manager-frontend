@@ -13,7 +13,7 @@ export const Header = () => {
 
   return (
     <header className={styles.container}>
-      <h3 className='font-medium text-xl'>
+      <h3 className='text-xl font-medium'>
         <Link href='/'>Files Manager</Link>
       </h3>
 

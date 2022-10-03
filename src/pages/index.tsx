@@ -71,10 +71,10 @@ const Home: NextPage = () => {
             leaveFrom='opacity-100'
             leaveTo='opacity-0'
           >
-            <div className='fixed inset-0 bg-black bg-opacity-25'></div>
+            <div className='fixed inset-0 bg-black/25'></div>
           </Transition.Child>
 
-          <div className='fixed inset-0 verflow-y-auto'>
+          <div className='fixed inset-0 overflow-y-auto'>
             <div className='flex min-h-full items-center justify-center p-4 text-center'>
               <Transition.Child
                 as={Fragment}
@@ -85,7 +85,7 @@ const Home: NextPage = () => {
                 leaveFrom='opacity-100 scale-100'
                 leaveTo='opacity-0 scale-95'
               >
-                <Dialog.Panel className='w-full max-w-md transform overflow-hidden rounded-md bg-white dark:bg-neutral-800 p-6 text-left align-middle shadow-xl transition-all'>
+                <Dialog.Panel className='w-full max-w-md overflow-hidden rounded-md bg-white p-6 text-left align-middle shadow-xl transition-all dark:bg-neutral-800'>
                   <Dialog.Title as='h3' className='text-lg font-medium leading-6 text-gray-700 dark:text-gray-50'>
                     About this app
                   </Dialog.Title>
@@ -94,7 +94,7 @@ const Home: NextPage = () => {
                     <p className='text-sm text-gray-500 dark:text-gray-400'>
                       This is app is developed in Next.js and Node.js to test the abilities of the developer.
 
-                      <p className='text-xs pt-4'>Version 1.0</p>
+                      <p className='pt-4 text-xs'>Version 1.0</p>
                     </p>
                   </div>
                 </Dialog.Panel>
