@@ -13,14 +13,14 @@ export const Header = () => {
 
   return (
     <header className={styles.container}>
-      <h3 className="font-medium text-xl">
-        <Link href="/">Files Manager</Link>
+      <h3 className='font-medium text-xl'>
+        <Link href='/'>Files Manager</Link>
       </h3>
 
       <nav className={styles.btn_action_container}>
         {pathname === '/' && (
           <button>
-            <Link href="/list">
+            <Link href='/list'>
               <BsList
                 size={20}
                 style={{ color: `${theme['--text']}` }} />
@@ -30,7 +30,7 @@ export const Header = () => {
 
         {pathname === '/list' && (
           <button>
-            <Link href="/">
+            <Link href='/'>
               <BsUpload size={20} style={{ color: `${theme['--text']}` }} />
             </Link>
           </button>

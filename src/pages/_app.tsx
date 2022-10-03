@@ -11,7 +11,7 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }: AppProps) => {
   return (
     <ThemeProvider>
       <Head>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name='viewport' content='initial-scale=1.0, width=device-width' />
       </Head>
       <ToastWrapper />
       <Component {...pageProps} />

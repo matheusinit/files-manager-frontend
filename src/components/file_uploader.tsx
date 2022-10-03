@@ -100,10 +100,10 @@ const FileUploader: FC<Props> = ({ setProgress }) => {
 
       <div className={styles.button_container}>
         <button
-          className="h-10 py-2 px-6 border border-solid border-custom-red hover:text-gray-200 text-white bg-custom-red hover:bg-red-700 dark:bg-transparent ease-in-out delay-200"
+          className='h-10 py-2 px-6 border border-solid border-custom-red hover:text-gray-200 text-white bg-custom-red hover:bg-red-700 dark:bg-transparent ease-in-out delay-200'
           onClick={resetFiles}>Cancel</button>
         <button
-          className="text-white py-2 px-6 hover:text-gray-200 bg-primary dark:bg-transparent dark:border dark:border-solid dark:border-neutral-600 transition-all ease-in-out delay-200"
+          className='text-white py-2 px-6 hover:text-gray-200 bg-primary dark:bg-transparent dark:border dark:border-solid dark:border-neutral-600 transition-all ease-in-out delay-200'
           onClick={onUpload}>Upload</button>
       </div>
     </>

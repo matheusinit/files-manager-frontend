@@ -58,7 +58,7 @@ export const FileListItem: FC<Props> = ({ id, filename, size, mimetype, setFiles
     <div className={styles.container}>
       <div className={styles.top}>
         <div className={styles.checkbox_container}>
-          <input type="checkbox" checked={isFileSelected} hidden readOnly aria-hidden />
+          <input type='checkbox' checked={isFileSelected} hidden readOnly aria-hidden />
           <div
             className={styles.checkbox}
             onClick={checkboxClickHandler}
@@ -82,14 +82,14 @@ export const FileListItem: FC<Props> = ({ id, filename, size, mimetype, setFiles
       <div className={styles.actions}>
         {/* buttons */}
         <Button
-          color="#FFF"
+          color='#FFF'
           backgroundColor={themeType === 'dark' ? theme['--secondary-background'] : '#CA5656'}
           borderRadius='24px'
           borderColor={themeType === 'dark' ? '#CA5656' : 'none'}
           onClick={deleteFileEvent}
         >Delete</Button>
 
-        <Button color="#fff"
+        <Button color='#fff'
           backgroundColor={themeType === 'dark' ? theme['--secondary-background'] : '#2965BF'}
           borderRadius='24px'
           borderColor={themeType === 'dark' ? '#2965BF' : 'none'}

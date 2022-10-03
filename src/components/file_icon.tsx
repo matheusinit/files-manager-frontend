@@ -18,15 +18,15 @@ const FileIcon: FC<Props> = ({ type }) => {
 
   switch (type) {
     case 'image/png': return (
-      <Icon icon="file-png" size={20} color={theme['--text']} />
+      <Icon icon='file-png' size={20} color={theme['--text']} />
     )
 
     case 'application/pdf': return (
-      <Icon icon="file-pdf" size={20} color={theme['--text']} />
+      <Icon icon='file-pdf' size={20} color={theme['--text']} />
     )
 
     default: return (
-      <Icon icon="file" size={20} color={theme['--text']} />
+      <Icon icon='file' size={20} color={theme['--text']} />
     )
   }
 }
